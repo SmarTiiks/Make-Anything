@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Text:wght@400;700&family=Inika:wght@400;700&family=Istok+Web:wght@400;700&display=swap');
+
+:root{
+    --r50: #F8EAE9;
+    --r75: #E2A8A3;
+    --r100: #D6857D;
+    --r200: #C45045;
+    --r300: #B82C1F;
+    --r400: #811F16;
+    --r500: #701B13;
+    --b0: #FFFFFF;
+    --b30: #EEEBEB;
+    --b50: #CBC2C1;
+    --b80: #A79997;
+    --b300: #755E5C;
+    --b700: #452623;
+    --b900: #2E0B08;
+}

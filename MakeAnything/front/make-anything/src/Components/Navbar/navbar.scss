@@ -1,0 +1,53 @@
+// @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Text:wght@400;700&family=Inika:wght@400;700&display=swap');
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    align-items: center;
+    min-height: 120px;
+    background-color: var(--r300);
+    flex-wrap: wrap;
+}
+
+.navbar_logo{
+    display: flex;
+    align-items: center;
+    color: black;
+    margin-left: 34px;
+    text-decoration: none;
+    text-shadow: 0 0 5px var(--b0);
+
+    span{
+        font-family: 'Big Shoulders Text', sans-serif;
+        font-size: 35px;
+        color: var(--b900);
+    }
+
+    &:hover{
+        color: var(--b900);
+    }
+}
+
+.navlinks{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50vw;
+    margin-right: 5vw;
+    color: var(--b900);
+    text-decoration: none;
+    text-Shadow: 0 0 5px white;
+    gap: 20px;
+    a{
+        font-family: 'Inika', serif;
+        font-size: 20px;
+        color: black;
+        text-decoration: none;
+        text-Shadow: 0 0 5px white;
+
+        &:hover{
+            color: black;
+        }
+    }
+}

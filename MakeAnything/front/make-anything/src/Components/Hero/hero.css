@@ -1,0 +1,23 @@
+.hero {
+  background-image: url("http://localhost:5000/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 228px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.hero .hero_content {
+  font-family: "Big Shoulders Text", sans-serif;
+  font-size: 20px;
+  color: var(--r50);
+  text-shadow: 0 0 8px var(--r300);
+}
+.hero .hero_content h1 {
+  font-family: "Big Shoulders Text", sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+}/*# sourceMappingURL=hero.css.map */

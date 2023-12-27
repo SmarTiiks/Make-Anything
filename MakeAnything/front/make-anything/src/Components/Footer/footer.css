@@ -1,0 +1,20 @@
+.footer {
+  background-color: var(--r300);
+  height: 120px;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 25px;
+  align-items: center;
+  font-family: "Inika", serif;
+  font-size: 20px;
+  color: var(--b900);
+  text-shadow: 0 0 5px var(--b0);
+}
+
+.footer_links img {
+  height: 30px;
+  width: 30px;
+  margin: 0 10px;
+  border-radius: 20px;
+}/*# sourceMappingURL=footer.css.map */
