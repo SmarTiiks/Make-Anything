@@ -28,7 +28,7 @@ const cookieParser = require('cookie-parser');
 app.use(cookieParser());
 
 // JWT
-// const {createToken, validateToken} = require('./JWT');
+const {createToken, validateToken} = require('./JWT');
 
 // JWT-decode
 const {jwtDecode} = require('jwt-decode');

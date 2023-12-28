@@ -1,13 +1,8 @@
-const { render } = require('ejs');
 const User = require('./models/User');
 const bcrypt = require('bcrypt');
 const Model = require('./models/Model');
 
 function doAll(app) {
-
-app.get('/register', function(req, res) {
-    res.render('Register');
-});
 
     app.post('/api/inscription', function(req, res) {
         var username = req.body.username;

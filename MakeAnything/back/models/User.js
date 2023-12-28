@@ -4,8 +4,8 @@ const contactSchema = mongoose.Schema({
     email : {type : String, required : true, unique : true},
     password : {type : String, required : true},
     admin : {type : Boolean, default : false},
-    picture: {type : String},
-    likedModels: {type : Array},
+    picture: {type : String , default : ""},
+    likedModels: {type : Array, default : []},
 });
 
 module.exports = mongoose.model('User', contactSchema);
