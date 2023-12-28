@@ -1,52 +1,66 @@
 const User = require('./models/User');
 const bcrypt = require('bcrypt');
 const Model = require('./models/Model');
+const {createToken, validateToken} = require('./JWT');
+const {jwtDecode} = require('jwt-decode');
+const multer = require('multer');
+const express = require('express');
 
 function doAll(app) {
+    app.use(express.static('uploads'));
+    const storage = multer.diskStorage({
+        destination: function(req, file, cb) {
+            cb(null, 'uploads/');
+        },
+        filename: function(req,file,cb) {
+            cb(null, Date.now() + '-' + file.originalname);
+        }
+    });
+    const upload = multer({storage: storage});
 
-    app.post('/api/inscription', function(req, res) {
+    app.post('/inscription', upload.single('image'), function(req, res) {
         var username = req.body.username;
         var password = bcrypt.hashSync(req.body.password, 10);
+        var picture = req.file ? req.file.filename : "";
         var email = req.body.email;
-        var admin = false;
         var newUser = new User({
             username : username,
             email : email,
+            picture : picture,
             password : password,
-            admin : admin
         });
         newUser.save()
         .then( item => {
             console.log("Utilisateur créé");
-            res.redirect('/login');
+            res.redirect('http://localhost:3000/connexion');
         }).catch(err => {
-            res.status(404).send("Erreur lors de la création de l'utilisateur");
+            res.status(404).json("Erreur lors de la création de l'utilisateur");
         });
     });
 
-    app.get('/login', function(req, res) {
-        res.render('Login');
-    });
-
-    app.post('/api/connexion', function(req, res) {
-        var username = req.body.username;
-        var password = req.body.password;
-        User.findOne({username : username}).then(function(user) {
-            if(user) {
-                if(bcrypt.compareSync(password, user.password)) {
-                    console.log("Connexion réussie");
-                    req.session.user = user;
-                    res.redirect('/monCompte');
+    app.post('/api/connexion', function(req, res){
+        User.findOne({
+            username: req.body.username
+        }).then(user => {
+            if(user){
+                if(bcrypt.compareSync(req.body.password, user.password)){
+                    console.log('User found');
+                    const accessToken = createToken(user);
+                    res.cookie('access-token', accessToken, {
+                        maxAge: 1000 * 60 * 60 * 24 * 30, // 30 days
+                        httpOnly: true
+                    });
+                    console.log("cookie created successfully");
+                    res.redirect('http://localhost:3000/');
                 } else {
-                    res.status(404).send("Mot de passe incorrect");
+                    return res.status(404).json("Invalid password");
                 }
             } else {
-                res.status(404).send("Utilisateur introuvable");
+                return res.status(404).json("User not found with username " + req.body.username);
             }
-        }).catch(function(err) {
-            res.status(404).send("Erreur lors de la connexion");
+        }).catch(err => {
+            console.log(err);
         });
-
     });
 
     app.get('/monCompte', function(req, res) {
@@ -64,7 +78,7 @@ function doAll(app) {
 
     app.get('/logout', function(req, res) {
         req.session.destroy();
-        res.redirect('/');
+        res.redirect('http://localhost:3000/connexion');
     });
 };
 

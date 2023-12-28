@@ -18,6 +18,10 @@
     text-decoration: none;
     text-shadow: 0 0 5px var(--b0);
 
+    &:hover{
+        text-shadow: 0 0 5px var(--b80);
+    }
+
     span{
         font-family: 'Big Shoulders Text', sans-serif;
         font-size: 35px;
@@ -48,6 +52,7 @@
 
         &:hover{
             color: black;
+            text-shadow: 0 0 5px var(--b80); 
         }
     }
 }

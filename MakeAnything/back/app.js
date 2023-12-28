@@ -60,6 +60,12 @@ app.set('view engine', 'ejs');
 //     });
 // });
 
+app.get('/getJwt', validateToken, function(req, res) {
+    const decoded = jwtDecode(req.cookies["access-token"]);
+    log(decoded);
+    res.json(decoded);
+});
+
 //     app.put("/editpost/:id", function(req, res) {
 //         const Data = {
 //             sujet : req.body.sujet,

@@ -4,15 +4,34 @@ import Navbar from './Components/Navbar/Navbar';
 import { Route, Routes } from 'react-router-dom';
 import Hero from './Components/Hero/Hero';
 import Footer from './Components/Footer/Footer';
+import Inscription from './Components/Inscription/Inscription';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+
+
 
 function App() {
+
+  // Check for account token
+  const[jwt, setJwt] = useState(null);
+  useEffect(() => {
+    axios.get('http://localhost:5000/getJwt', {withCredentials: true})
+    .then(response => {
+      setJwt(response.data);
+    })
+    .catch(error => {
+      // console.log(error.message);
+    })
+  }, [])
+
   return (
     <div className="App">
       <Hero />
-      <Navbar />
+      <Navbar jwt={jwt} />
 
       <Routes>
       <Route path="/buy" element={<h1>Buy</h1>} />
+      <Route path='/inscription' element={<Inscription></Inscription>} />
       </Routes>
       <Footer />
     </div>

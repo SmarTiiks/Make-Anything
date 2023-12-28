@@ -1,0 +1,62 @@
+.title {
+  font-family: "Big Shoulders Text", sans-serif;
+  font-size: 40px;
+}
+
+.content {
+  margin: 20px 0 60px 0;
+}
+.content form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 80vw;
+  margin: auto;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 50px;
+  background-color: var(--b80);
+}
+.content form div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.content form div label {
+  font-family: "Inika", serif;
+  font-weight: bold;
+  font-size: 20px;
+  color: var(--b900);
+}
+.content form div label span {
+  color: red;
+  font-weight: 400;
+}
+.content form div input {
+  font-family: "Inika", serif;
+  font-size: 20px;
+  padding: 5px 10px;
+  border-radius: 20px;
+  border: none;
+  background-color: var(--b0);
+  transition: 0.1s;
+}
+.content form div input:focus {
+  outline: none;
+  box-shadow: 0 0 5px var(--b900);
+}
+.content form .submit {
+  font-family: "Inika", serif;
+  font-size: 25px;
+  padding: 5px 10px;
+  border-radius: 20px;
+  width: 50%;
+  margin: 15px auto;
+  border: none;
+  background-color: var(--b0);
+  transition: 0.1s;
+}
+.content form .submit:hover {
+  background-color: var(--b900);
+  color: white;
+}/*# sourceMappingURL=Inscription.css.map */
