@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import './Inscription.css'
-
+import axios from 'axios'
 export class Inscription extends Component {
+  
   constructor(props) {
     super(props)
   
@@ -15,7 +16,7 @@ export class Inscription extends Component {
   }
 
   handleFileChange = event =>{
-    setImage(event.target.files[0]);
+    this.setState({picture : event.target.files[0]});
 }
 
   handleusernameChange = (event) => {
@@ -34,25 +35,27 @@ export class Inscription extends Component {
     this.setState({confirmpassword: event.target.value});
   }
 
-//   handleSubmit = event =>{
-//     event.preventDefault();
-//     if(!image && !titre && !description){
-//         return;
-//     }
-//     const formData = new FormData();
-//     formData.append('image', image);
-//     formData.append('titre', titre);
-//     formData.append('description', description);
-//     formData.append('date', date);
-//     axios.post('http://localhost:5000/submit-post', formData)
-//     .then(response => {
-//         console.log(response);
-//         navigate(`/blog/${response.data.id}`);
-//     })
-//     .catch(error => {
-//         console.log(error.message);
-//     })
-// }
+  handleSubmit = event =>{
+    event.preventDefault();
+    if(this.state.password !== this.state.confirmpassword || this.state.password.length < 8){
+      alert("Les mots de passe ne correspondent pas ou sont trop courts");
+        return;
+    }
+    const formData = new FormData();
+    formData.append('picture', this.state.picture);
+    formData.append('username', this.state.username);
+    formData.append('email', this.state.email);
+    formData.append('password', this.state.password);
+    axios.post('http://localhost:5000/inscription', formData)
+    .then(response => {
+        console.log(response);
+        window.location.href = '/connexion';
+        // redirect('/connexion');
+      })
+      .catch(error => {
+        console.log(error.message);
+      })
+}
 
   render() {
     return (

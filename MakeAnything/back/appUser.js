@@ -5,6 +5,7 @@ const {createToken, validateToken} = require('./JWT');
 const {jwtDecode} = require('jwt-decode');
 const multer = require('multer');
 const express = require('express');
+const fs = require('fs');
 
 function doAll(app) {
     app.use(express.static('uploads'));
@@ -18,7 +19,7 @@ function doAll(app) {
     });
     const upload = multer({storage: storage});
 
-    app.post('/inscription', upload.single('image'), function(req, res) {
+    app.post('/inscription', upload.single('picture'), function(req, res) {
         var username = req.body.username;
         var password = bcrypt.hashSync(req.body.password, 10);
         var picture = req.file ? req.file.filename : "";
@@ -32,13 +33,17 @@ function doAll(app) {
         newUser.save()
         .then( item => {
             console.log("Utilisateur créé");
-            res.redirect('http://localhost:3000/connexion');
+            res.json("Utilisateur créé");
+            // res.redirect('http://localhost:3000/connexion');
         }).catch(err => {
+            if(picture !== ""){
+            fs.unlinkSync('uploads/' + picture);
+            }
             res.status(404).json("Erreur lors de la création de l'utilisateur");
         });
     });
 
-    app.post('/api/connexion', function(req, res){
+    app.post('/connexion', function(req, res){
         User.findOne({
             username: req.body.username
         }).then(user => {
@@ -77,8 +82,9 @@ function doAll(app) {
     });
 
     app.get('/logout', function(req, res) {
-        req.session.destroy();
-        res.redirect('http://localhost:3000/connexion');
+        res.clearCookie('access-token');
+        console.log("token destroyed");
+        res.json("token destroyed");
     });
 };
 

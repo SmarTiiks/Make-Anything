@@ -1,12 +1,12 @@
-.title {
+.content {
+  margin: 20px 0 60px 0;
+}
+.content .title {
   font-family: "Big Shoulders Text", sans-serif;
   font-size: 40px;
 }
 
-.content {
-  margin: 20px 0 60px 0;
-}
-.content form {
+.formconnect {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -17,22 +17,16 @@
   border-radius: 50px;
   background-color: var(--b80);
 }
-.content form div {
+.formconnect label {
   display: flex;
   flex-direction: column;
   gap: 10px;
-}
-.content form div label {
   font-family: "Inika", serif;
   font-weight: bold;
   font-size: 20px;
   color: var(--b900);
 }
-.content form div label span {
-  color: red;
-  font-weight: 400;
-}
-.content form div input {
+.formconnect input {
   font-family: "Inika", serif;
   font-size: 20px;
   padding: 5px 10px;
@@ -41,11 +35,11 @@
   background-color: var(--b0);
   transition: 0.1s;
 }
-.content form div input:focus {
+.formconnect input:focus {
   outline: none;
   box-shadow: 0 0 5px var(--b900);
 }
-.content form .submit {
+.formconnect .submit {
   font-family: "Inika", serif;
   font-size: 25px;
   padding: 5px 10px;
@@ -56,7 +50,7 @@
   background-color: var(--b0);
   transition: 0.1s;
 }
-.content form .submit:hover {
+.formconnect .submit:hover {
   background-color: var(--b900);
   color: var(--b0);
-}/*# sourceMappingURL=Inscription.css.map */
+}/*# sourceMappingURL=Connexion.css.map */
