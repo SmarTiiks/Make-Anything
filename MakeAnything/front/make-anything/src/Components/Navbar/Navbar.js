@@ -19,11 +19,10 @@ function Navbar() {
     })
   }, [])
     const current = window.location.pathname.split("/")[1]
-    console.log(current);
 
     const handledisconnect = (event) => {
         event.preventDefault();
-        axios.get('http://localhost:5000/logout', {withCredentials: true})
+        axios.get('/logout', {withCredentials: true})
         .then(response => {
             console.log(response.data);
             window.location.href = '/connexion';
@@ -35,20 +34,20 @@ function Navbar() {
 
   return (
     <nav className='navbar'>
-        <Link to="/" className='navbar_logo'><img src='http://localhost:5000/logo.png' width={"100px"} height={"100px"}></img><span>Make Anything</span></Link>
+        <Link to="/" className='navbar_logo'><img src='/logo.png' width={"100px"} height={"100px"}></img><span className='navbartitle'>Make Anything</span></Link>
         <div className='navlinks'>
-        <Link to="/" >Accueil</Link>
+        <Link to="/" className='navbarlink' >Accueil</Link>
         {!jwt && (
           <React.Fragment>
-            <Link to="/inscription">Inscription</Link>
-            <Link to="/connexion">Connexion</Link>
+            <Link to="/inscription" className='navbarlink'>Inscription</Link>
+            <Link to="/connexion" className='navbarlink'>Connexion</Link>
           </React.Fragment>
         )}
         {jwt && (
           <React.Fragment>
-            <Link to="/buy">Publier un Modèle</Link>
-            <Link to="/moncompte">Mon Compte</Link>
-            <Link to="/deconnexion" onClick={handledisconnect}>Déconnexion</Link>
+            <Link to="/buy" className='navbarlink'>Publier un Modèle</Link>
+            <Link to="/moncompte" className='navbarlink'>Mon Compte</Link>
+            <Link to="/deconnexion" onClick={handledisconnect} className='navbarlink'>Déconnexion</Link>
           </React.Fragment>
         )}
         </div>

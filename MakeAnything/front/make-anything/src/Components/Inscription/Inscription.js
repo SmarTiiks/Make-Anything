@@ -49,6 +49,7 @@ export class Inscription extends Component {
     axios.post('http://localhost:5000/inscription', formData)
     .then(response => {
         console.log(response);
+        // this.props.history.push('/connexion');
         window.location.href = '/connexion';
         // redirect('/connexion');
       })
@@ -59,20 +60,20 @@ export class Inscription extends Component {
 
   render() {
     return (
-    <div className='content'>
+    <div className='form'>
         <h1 className='title'>Inscription</h1>
         <form action='http://localhost:5000/inscription' method='post' onSubmit={this.handleSubmit}>
-            <div><label htmlFor='username'>Nom d'utilisateur <span>*</span></label>
+            <div><label htmlFor='username' className='content'>Nom d'utilisateur <span>*</span></label>
             <input type="text" required id='username' name='username' value={this.state.username} onChange={this.handleusernameChange}></input></div>
-            <div><label htmlFor='email'>Adresse mail <span>*</span></label>
+            <div><label htmlFor='email' className='content'>Adresse mail <span>*</span></label>
             <input type="email"required id='email' name='email' value={this.state.email} onChange={this.handleemailChange}></input></div>
-            <div><label htmlFor='picture'>Photo de profil</label>
+            <div><label htmlFor='picture' className='content'>Photo de profil</label>
             <input type='file'id='picture' name='picture' onChange={this.handleFileChange}></input></div>
-            <div><label htmlFor='password'>Mot de passe <span>*</span></label>
+            <div><label htmlFor='password' className='content'>Mot de passe <span>*</span></label>
             <input type="password" required id='password' name='password' value={this.state.password} onChange={this.handlepasswordChange}></input></div>
-            <div><label htmlFor='confirmpassword'>Confirmer le mot de passe <span>*</span></label>
+            <div><label htmlFor='confirmpassword' className='content'>Confirmer le mot de passe <span>*</span></label>
             <input type="password" required id='confirmpassword' name='confirmpassword' value={this.state.confirmpassword} onChange={this.handleconfirmpasswordChange}></input></div>
-            <input type="submit" value="S'inscrire" className='submit'></input>
+            <input type="submit" value="S'inscrire" className='submit button'></input>
         </form>
     </div>
     )

@@ -2,6 +2,7 @@
 
 # dependencies
 /node_modules
+/MakeAnything\back\node_modules
 /.pnp
 .pnp.js
 

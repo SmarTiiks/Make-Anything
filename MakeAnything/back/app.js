@@ -61,9 +61,15 @@ app.set('view engine', 'ejs');
 // });
 
 app.get('/getJwt', validateToken, function(req, res) {
-    const decoded = jwtDecode(req.cookies["access-token"]);
-    console.log(decoded);
-    res.json(decoded);
+    console.log(req.cookies["access-token"]);
+    if(req.cookies["access-token"]){
+        const decoded = jwtDecode(req.cookies["access-token"]);
+        console.log(decoded);
+        res.json(decoded);
+    }
+    else{
+        res.json(null);
+    }
 });
 
 //     app.put("/editpost/:id", function(req, res) {

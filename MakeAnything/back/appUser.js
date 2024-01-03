@@ -6,6 +6,7 @@ const {jwtDecode} = require('jwt-decode');
 const multer = require('multer');
 const express = require('express');
 const fs = require('fs');
+const { log } = require('console');
 
 function doAll(app) {
     app.use(express.static('uploads'));
@@ -57,6 +58,7 @@ function doAll(app) {
                     });
                     console.log("cookie created successfully");
                     res.redirect('http://localhost:3000/');
+                    // res.json(accessToken);
                 } else {
                     return res.status(404).json("Invalid password");
                 }

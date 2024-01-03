@@ -16,3 +16,80 @@
     --b700: #452623;
     --b900: #2E0B08;
 }
+.title{
+    font-family: 'Big Shoulders Text', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--b900);
+
+}
+.navbartitle{
+    font-family: 'Big Shoulders Text', sans-serif;
+    font-size: 35px;
+    text-shadow: 0 0 5px var(--b0);
+    color: black;
+
+}
+.navbarlink{
+    font-family: 'Inika', serif;
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+    text-Shadow: 0 0 5px white;
+}
+
+.navbarlink:hover, .navbartitle:hover{
+    text-shadow: 0 0 5px var(--b80);
+    color: black;
+    cursor: pointer;
+}
+
+.modeltitle{
+    font-family: 'Inika', serif;
+    font-weight: bold;
+    font-size: 25px;
+    color: var(--b900);
+
+}
+.content{
+    font-family: 'Inika', serif;
+    font-size: 20px;
+    color: var(--b900);
+
+}
+.bigbutton{
+    font-family: 'Inika', serif;
+    font-size: 30px;
+    border: none;
+    background-color: var(--b0);
+    transition: 0.1s;
+    color: var(--b900);
+
+}
+.smallbutton{
+    font-family: 'Inika', serif;
+    font-size: 20px;
+    border: none;
+    background-color: var(--b0);
+    transition: 0.1s;
+    color: var(--b900);
+
+}
+.button{
+    font-family: 'Inika', serif;
+    font-size: 25px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    width: 50%;
+    border: none;
+    background-color: var(--b0);
+    transition: 0.1s;
+    color: var(--b900);
+
+}
+.smallbutton:hover, .bigbutton:hover, .button:hover{
+    background-color: var(--b900);
+    color: var(--b0);
+    cursor: pointer;
+}
+
