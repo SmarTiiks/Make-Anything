@@ -1,0 +1,81 @@
+.cardModel{
+    margin: 0;
+    background-color: var(--r50);
+    border:  solid var(--b700) 1px;
+    min-width: 200px;
+    width: 300px;
+    min-height: 330px;
+    border-radius: 20px;
+    justify-content: space-around;
+    box-shadow: 0px 0px 20px var(--b700);
+    @media (max-width: 480px) {
+        scale: 0.85;
+    }
+
+    // margin: auto;
+    img{
+        width: 280px;
+        min-height: 160px;
+        margin-top: 9px;
+        object-fit: cover;
+        border-radius: 20px;
+        background-color: white;
+        box-shadow: 0px 0px 10px var(--b700);
+        cursor: pointer;
+        }
+
+    .modeltitle{
+        font-family: inika;
+        cursor: pointer;
+    }
+
+    .buttoncontainer{
+        display: flex;
+        justify-content: space-around;
+
+        .smallbutton{
+        background-color: var(--r75);
+        width: 103px;
+        border-radius: 20px;
+        height: 23px;
+
+        &:hover{
+            background-color: var(--r100);
+            color: var(--b700);
+        }
+        }
+    }
+    .smallbutton{
+        background-color: var(--r75);
+        width: 250px;
+        margin: auto;
+        border-radius: 20px;
+        height: 23px;
+
+        &:hover{
+            background-color: var(--r100);
+            color: var(--b700);
+        }
+    }
+
+    .deletebutton{
+        background-color: var(--r300);
+        color: var(--b0);
+        width: 250px;
+        margin: auto;
+        border-radius: 20px;
+        height: 23px;
+
+        &:hover{
+            background-color: var(--b700);
+            color: var(--b50);
+        }
+    }
+
+    .mt{
+        margin-top: 22px;
+    }
+    .mb{
+        margin-bottom: 10px;
+    }
+}

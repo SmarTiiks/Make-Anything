@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom'
 import './hero.css'
 
 function Hero() {
-    const current = window.location.pathname.split("/")[1]
-
   return (
     <div className='hero'>
         <div className='hero_content'>

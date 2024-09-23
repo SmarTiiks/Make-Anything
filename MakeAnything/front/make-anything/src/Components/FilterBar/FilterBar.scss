@@ -1,0 +1,28 @@
+.filter-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--r300);
+    height: 40px;
+    border-top: 1px solid var(--b900);
+    @media (max-width: 480px) {
+
+        flex-wrap: wrap;
+        height: 90px;
+
+    }
+
+    .filter-tag {
+        @media (max-width: 480px) {
+
+            font-size: 15px;
+            margin-bottom: 5px;
+
+        }
+    }
+
+    .current{
+        color: var(--r50);
+    }
+}

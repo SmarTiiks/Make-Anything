@@ -1,0 +1,9 @@
+.modelviewer{
+    width: 50vw;
+    height: 50vw;
+
+    @media (max-width: 480px) {
+        width: 95vw;
+        height: 95vw;
+    }
+}

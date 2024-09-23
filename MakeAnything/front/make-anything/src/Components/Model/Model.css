@@ -1,0 +1,65 @@
+.car {
+  width: 45vw;
+  margin-left: 3vw;
+  border-radius: 50px;
+}
+@media (max-width: 480px) {
+  .car {
+    width: 94vw;
+    margin-left: 3vw;
+  }
+}
+
+.model {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px 0;
+}
+@media (max-width: 480px) {
+  .model {
+    flex-direction: column;
+  }
+}
+.model .rightGroup {
+  width: 45vw;
+  margin-right: 3vw;
+}
+.model .rightGroup div {
+  background-color: var(--r50);
+  border-radius: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 1px solid var(--b900);
+  padding: 10px;
+  height: 50%;
+}
+.model .rightGroup .fullsize {
+  height: 100%;
+}
+@media (max-width: 480px) {
+  .model .rightGroup {
+    width: 99vw;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+.model .leftGroup {
+  margin-left: 10px;
+}
+.model .leftGroup .viewbutton {
+  margin-bottom: 10px;
+}
+.model .leftGroup .buttoncontainer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.model .leftGroup .buttoncontainer .bigbutton {
+  width: 45%;
+}
+
+.comments {
+  width: 96%;
+  margin: auto;
+}/*# sourceMappingURL=Model.css.map */

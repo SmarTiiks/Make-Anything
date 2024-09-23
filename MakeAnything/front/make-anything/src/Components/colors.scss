@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Text:wght@400;700&family=Inika:wght@400;700&family=Istok+Web:wght@400;700&display=swap');
+
+:root {
+    --r50: #F8EAE9;
+    --r75: #E2A8A3;
+    --r100: #D6857D;
+    --r200: #C45045;
+    --r300: #B82C1F;
+    --r400: #811F16;
+    --r500: #701B13;
+    --b0: #FFFFFF;
+    --b30: #EEEBEB;
+    --b50: #CBC2C1;
+    --b80: #A79997;
+    --b300: #755E5C;
+    --b700: #452623;
+    --b900: #2E0B08;
+}
+
+.title {
+    font-family: 'Big Shoulders Text', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--b900);
+
+}
+
+.navbartitle {
+    font-family: 'Big Shoulders Text', sans-serif;
+    font-size: 35px;
+    text-shadow: 0 0 5px var(--b0);
+    /* text-shadow: 1px 0 0px var(--b80), -1px 0 0px var(--b80), 0 1px 0px var(--b80), 0 -1px 0px var(--b80); */
+    color: var(--b900);
+
+}
+
+.navbarlink {
+    font-family: 'Inika', serif;
+    font-size: 20px;
+    color: var(--b900);
+    text-decoration: none;
+    text-Shadow: 0 0 5px white;
+    /* text-shadow: 0.05em 0 0px var(--b80), -0.05em 0 0px var(--b80), 0 0.05em 0px var(--b80), 0 -0.05em 0px var(--b80); */
+
+}
+
+.navbarlink:hover,
+.navbartitle:hover {
+    text-shadow: 0 0 5px var(--b80);
+    color: var(--b900);
+    cursor: pointer;
+}
+
+.modeltitle {
+    font-family: 'Inika', serif;
+    font-weight: bold;
+    font-size: 25px;
+    color: var(--b900);
+
+}
+
+.content {
+    font-family: 'Inika', serif;
+    font-size: 20px;
+    color: var(--b900);
+
+}
+
+.bigbutton {
+    font-family: 'Inika', serif;
+    font-size: 30px;
+    border: none;
+    background-color: var(--r75);
+    border-radius: 20px;
+    padding: 5px 0;
+    transition: 0.3s;
+    color: var(--b900);
+
+}
+
+.smallbutton {
+    font-family: 'Inika', serif;
+    font-size: 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: var(--r75);
+    padding: 0px 0;
+    transition: 0.3s;
+    color: var(--b900);
+
+}
+
+.button {
+    font-family: 'Inika', serif;
+    font-size: 25px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    width: 50%;
+    border: none;
+    background-color: var(--b0);
+    transition: 0.3s;
+    color: var(--b900);
+
+}
+
+.smallbutton:hover,
+.bigbutton:hover,
+.button:hover {
+    background-color: var(--b900);
+    color: var(--b0);
+    cursor: pointer;
+}

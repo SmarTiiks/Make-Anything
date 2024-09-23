@@ -1,0 +1,10 @@
+.modelviewer {
+  width: 50vw;
+  height: 50vw;
+}
+@media (max-width: 480px) {
+  .modelviewer {
+    width: 95vw;
+    height: 95vw;
+  }
+}/*# sourceMappingURL=ModelViewer.css.map */

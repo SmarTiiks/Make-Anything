@@ -1,0 +1,70 @@
+.car {
+    width: 45vw;
+    margin-left: 3vw;
+    border-radius: 50px;
+
+    @media (max-width: 480px) {
+        width: 94vw;
+        margin-left: 3vw;
+    }
+}
+
+.model {
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: 480px) {
+        flex-direction: column;
+    }
+
+    margin: 50px 0;
+
+    .rightGroup {
+        width: 45vw;
+        margin-right: 3vw;
+
+        div{
+            background-color: var(--r50);
+            border-radius: 20px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            border: 1px solid var(--b900);
+            padding: 10px;
+            height: 50%;
+        }
+
+        .fullsize{
+            height: 100%;
+        }
+
+        @media (max-width: 480px) {
+            width: 99vw;
+            margin: auto;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    }
+
+    .leftGroup {
+        margin-left: 10px;
+
+        .viewbutton{
+            margin-bottom: 10px;
+        }
+
+        .buttoncontainer {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+
+            .bigbutton {
+                width: 45%;
+            }
+        }
+    }
+}
+
+.comments{
+    width: 96%;
+    margin: auto;
+}

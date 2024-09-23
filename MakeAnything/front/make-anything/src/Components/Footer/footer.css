@@ -5,11 +5,18 @@
   display: flex;
   justify-content: space-between;
   padding: 0 25px;
+  position: absolute;
+  bottom: 0px;
   align-items: center;
   font-family: "Inika", serif;
   font-size: 20px;
   color: var(--b900);
   text-shadow: 0 0 5px var(--b0);
+}
+@media (max-width: 480px) {
+  .footer {
+    font-size: 15px;
+  }
 }
 
 .footer_links img {
@@ -17,4 +24,11 @@
   width: 30px;
   margin: 0 10px;
   border-radius: 20px;
+}
+@media (max-width: 480px) {
+  .footer_links img {
+    width: 30px;
+    height: auto;
+    margin: 0 5px;
+  }
 }/*# sourceMappingURL=footer.css.map */

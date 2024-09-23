@@ -1,0 +1,92 @@
+.title{
+    font-family: 'Big Shoulders Text', sans-serif;
+    font-size: 40px;
+}
+
+.form{
+    margin: 20px 0 60px 0;
+
+    form{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 80vw;
+        margin: auto;
+        margin-top: 20px;
+        padding: 20px;
+        border-radius: 50px;
+        background-color: var(--b80);
+        // box-shadow: 0 0 10px var(--b900);
+
+        div{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            label{
+                font-weight: bold;
+
+                span{
+                    color: red;
+                    font-weight: 400;
+                }
+            }
+
+            textarea{
+                font-family: 'Inika', serif;
+                font-size: 20px;
+                padding: 7px 10px;
+                border-radius: 20px;
+                border: none;
+                background-color: var(--b0);
+                transition: 0.1s;
+                resize: none;
+                height: 200px;
+                overflow: scroll;
+                // box-shadow: 0 0 5px var(--b900);
+
+                &:focus{
+                    outline: none;
+                    box-shadow: 0 0 5px var(--b900);
+                }
+            }
+
+            input{
+                font-family: 'Inika', serif;
+                font-size: 20px;
+                padding: 5px 10px;
+                border-radius: 20px;
+                border: none;
+                background-color: var(--b0);
+                transition: 0.1s;
+                // box-shadow: 0 0 5px var(--b900);
+
+                &:focus{
+                    outline: none;
+                    box-shadow: 0 0 5px var(--b900);
+                }
+            }
+
+        }
+        .submit{
+            margin: 15px auto;
+            @media (max-width: 480px) {
+                width: 50vw;
+                font-size: 20px;
+            }
+        }
+        
+    }
+}
+
+.taggroup{
+    display: flex;
+    flex-direction: row !important;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 20px 0;
+    .tag{
+        display: flex;
+        flex-direction: row;
+    }
+}

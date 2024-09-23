@@ -15,6 +15,15 @@
   margin-left: 34px;
   text-decoration: none;
 }
+@media (max-width: 480px) {
+  .navbar_logo {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .navbar_logo img {
+    scale: 0.9;
+  }
+}
 
 .navlinks {
   display: flex;
@@ -23,4 +32,15 @@
   width: 50vw;
   margin-right: 5vw;
   gap: 20px;
+}
+@media (max-width: 480px) {
+  .navlinks {
+    width: 95vw;
+    justify-content: space-around;
+    margin: auto;
+  }
+  .navlinks .navbarlink {
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
 }/*# sourceMappingURL=navbar.css.map */

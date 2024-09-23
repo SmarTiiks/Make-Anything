@@ -1,0 +1,177 @@
+.new-comment {
+    display: flex;
+    align-items: center;
+    margin: 20px 45px;
+    margin-top: 20px;
+    background-color: var(--r50);
+    border-radius: 20px;
+    border: var(--b900) 1px solid;
+    max-height: 222px;
+
+    @media (max-width: 480px) {
+        flex-direction: column;
+        width: 95%;
+        margin: 10px auto;
+        gap: 10px;
+        padding: 5px 0;
+        max-height: fit-content;
+    }
+
+    .leftPart {
+        background-color: var(--r50);
+        width: 15%;
+        max-height: 220px;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        margin: 15px 0;
+
+        @media (max-width: 480px) {
+            width: 95%;
+            gap: 10px;
+            max-height: fit-content;
+
+        }
+
+        .profilePicture {
+            width: 90%;
+            max-height: 180px;
+            max-width: 180px;
+            margin: 5px auto;
+            border: var(--b900) 1px solid;
+            border-radius: 200px;
+
+            @media (max-width: 480px) {
+                width: 100%;
+                border-radius: 200px;
+                max-width: fit-content;
+                max-height: fit-content;
+            }
+        }
+        .uname{
+            margin: 0;
+            margin-bottom: 30px;
+        }
+
+    }
+
+    .middlePart {
+        display: flex;
+        flex-direction: column;
+        width: 65%;
+
+        @media (max-width: 480px) {
+            width: 95%;
+            gap: 10px;
+        }
+
+        margin: 0;
+
+        .ytitle {
+            border: var(--b900) 1px solid;
+            border-top: 0;
+            margin-right: -1px;
+
+
+            @media (max-width: 480px) {
+                border-top: 1px solid var(--b900);
+                border-radius: 20px;
+            }
+
+            border-radius: 0 0 20px 20px;
+            text-align: center;
+
+            ::placeholder {
+                color: var(--b80);
+                font-weight: bold;
+            }
+        }
+
+        .comment {
+            border: var(--b900) 1px solid;
+            border-bottom: 0;
+            border-top: 0;
+            margin-right: -1px;
+            height: 190px;
+            border-radius: 20px 20px 0 0;
+            resize: none;
+
+            @media (max-width: 480px) {
+                border-bottom: 1px solid var(--b900);
+                border-top: 1px solid var(--b900);
+                border-radius: 20px;
+            }
+
+            padding: 5px 10px;
+
+            ::placeholder {
+                color: var(--b80);
+            }
+        }
+
+        .relat {
+            position: relative;
+            height: 0;
+            width: 0;
+
+            @media (max-width: 480px) {
+                width: 100%;
+                gap: 10px;
+                height: auto;
+            }
+
+            .submit {
+                position: absolute;
+                bottom: 5px;
+                left: 50vw;
+                width: 80px;
+                height: 30px;
+                padding: 0;
+
+                @media (max-width: 480px) {
+                    position: relative;
+                    left: 0;
+                    margin: auto;
+                    width: 100%;
+                    gap: 10px;
+                }
+            }
+        }
+    }
+
+    .rightPart {
+        background-color: var(--b0);
+        height: 220px;
+        width: 20%;
+        border-radius: 0 20px 20px 0;
+        border-left: 1px solid var(--b900);
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+
+        @media (max-width: 480px) {
+            width: 95%;
+            border-radius: 20px;
+            border: 1px solid var(--b900);
+            gap: 10px;
+        }
+        .file {
+            width: 0.1px;
+            height: 0.1px;
+            opacity: 0;
+            overflow: hidden;
+            position: absolute;
+            z-index: -1;
+        }
+        .uploadcontent{
+            width: 100%;
+            padding: 900px 0;
+            overflow: hidden;
+            color: var(--b80);
+            &:hover{
+                color: var(--b900);
+                cursor: pointer;
+            }
+        }
+    }
+}

@@ -16,6 +16,14 @@
     align-items: center;
     margin-left: 34px;
     text-decoration: none;
+    @media (max-width: 480px) {
+        // scale: 0.75;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        img{
+            scale: 0.9;
+        }
+    }
 }
 
 .navlinks{
@@ -25,4 +33,13 @@
     width: 50vw;
     margin-right: 5vw;
     gap: 20px;
+    @media (max-width: 480px) {
+        width: 95vw;
+        justify-content: space-around;
+        margin: auto;
+        .navbarlink{
+                font-size: 15px;
+                margin-bottom: 5px;
+        }
+    }
 }

@@ -1,0 +1,24 @@
+.filter-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--r300);
+  height: 40px;
+  border-top: 1px solid var(--b900);
+}
+@media (max-width: 480px) {
+  .filter-bar {
+    flex-wrap: wrap;
+    height: 90px;
+  }
+}
+@media (max-width: 480px) {
+  .filter-bar .filter-tag {
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
+}
+.filter-bar .current {
+  color: var(--r50);
+}/*# sourceMappingURL=FilterBar.css.map */

@@ -2,7 +2,10 @@
   text-align: center;
   background-color: var(--b30);
   color: var(--b900);
+  position: relative;
   min-height: 100vh;
+  user-select: none;
+  padding-bottom: 120px;
 }
 
 .App-logo {

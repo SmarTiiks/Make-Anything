@@ -1,0 +1,81 @@
+.title {
+  font-family: "Big Shoulders Text", sans-serif;
+  font-size: 40px;
+}
+
+.form {
+  margin: 20px 0 60px 0;
+}
+.form form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 80vw;
+  margin: auto;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 50px;
+  background-color: var(--b80);
+}
+.form form div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.form form div label {
+  font-weight: bold;
+}
+.form form div label span {
+  color: red;
+  font-weight: 400;
+}
+.form form div textarea {
+  font-family: "Inika", serif;
+  font-size: 20px;
+  padding: 7px 10px;
+  border-radius: 20px;
+  border: none;
+  background-color: var(--b0);
+  transition: 0.1s;
+  resize: none;
+  height: 200px;
+  overflow: scroll;
+}
+.form form div textarea:focus {
+  outline: none;
+  box-shadow: 0 0 5px var(--b900);
+}
+.form form div input {
+  font-family: "Inika", serif;
+  font-size: 20px;
+  padding: 5px 10px;
+  border-radius: 20px;
+  border: none;
+  background-color: var(--b0);
+  transition: 0.1s;
+}
+.form form div input:focus {
+  outline: none;
+  box-shadow: 0 0 5px var(--b900);
+}
+.form form .submit {
+  margin: 15px auto;
+}
+@media (max-width: 480px) {
+  .form form .submit {
+    width: 50vw;
+    font-size: 20px;
+  }
+}
+
+.taggroup {
+  display: flex;
+  flex-direction: row !important;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+.taggroup .tag {
+  display: flex;
+  flex-direction: row;
+}/*# sourceMappingURL=NewModel.css.map */

@@ -2,12 +2,12 @@
 
 # dependencies
 /node_modules
-/..\back\node_modules
 /.pnp
 .pnp.js
 
 # testing
 /coverage
+junit.xml
 
 # production
 /build

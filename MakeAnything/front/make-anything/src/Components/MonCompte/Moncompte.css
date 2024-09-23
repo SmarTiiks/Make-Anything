@@ -1,0 +1,9 @@
+.containerCard {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin: 5px;
+  margin-bottom: 20px;
+  justify-content: space-around;
+}/*# sourceMappingURL=Moncompte.css.map */
